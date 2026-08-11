@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stone Sculpture &mdash; Collection</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Atelier Stone</div>
+  <nav>
+    <a href="#works" class="active">Works</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="images/IMG_2669.jpg" alt="">
+  <h1>Sculpture<br>in Stone</h1>
+  <div class="rule"></div>
+  <p>A Collection of Hand-Carved Works</p>
+  <div class="scroll-hint">Scroll to explore</div>
+</section>
+
+<div class="section-title reveal" id="works">
+  <h2>Selected Works</h2>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<section class="about reveal" id="about">
+  <h2>About the Collection</h2>
+  <div class="rule"></div>
+  <p>Each piece in this collection is hand-carved from natural stone &mdash;
+  springstone, opal stone, and verdite &mdash; celebrating the fluid,
+  organic forms and rich material textures characteristic of contemporary
+  stone sculpture. Every work is one of a kind.</p>
+</section>
+
+<footer id="contact">
+  Inquiries &mdash; contact@ateliersstone.com
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lbClose">&times;</button>
+  <button class="lightbox-prev" id="lbPrev">&#8249;</button>
+  <button class="lightbox-next" id="lbNext">&#8250;</button>
+  <div class="lightbox-content">
+    <div class="lightbox-img-wrap">
+      <img id="lbImg" src="" alt="">
+      <div class="lightbox-imgcount" id="lbImgCount"></div>
+    </div>
+    <div class="lightbox-info">
+      <h3 id="lbTitle"></h3>
+      <div class="rule"></div>
+      <p id="lbMaterial"></p>
+      <p id="lbSculptor" class="lightbox-detail"></p>
+      <p id="lbDims" class="lightbox-detail"></p>
+      <p id="lbPrice" class="lightbox-price"></p>
+    </div>
+  </div>
+</div>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing">
+  <div class="cursor-ring-spin">
+    <svg viewBox="0 0 40 40">
+      <circle class="cursor-ring-fill" cx="20" cy="20" r="15"></circle>
+      <path class="cursor-ring-path" d="M 32.8 20 A 12.8 12.8 0 1 1 32.4 15.8"></path>
+    </svg>
+  </div>
+</div>
+
+<script src="works.js"></script>
+<script>
+  const grid = document.getElementById('grid');
+  WORKS.forEach((w, i) => {
+    const el = document.createElement('div');
+    el.className = 'work reveal';
+    el.dataset.index = i;
+    const badge = w.images.length > 1 ? `<span class="photo-count">${w.images.length} views</span>` : '';
+    el.innerHTML = `
+      <figure><img src="${w.images[0]}" alt="${w.title}" loading="lazy">${badge}</figure>
+      <div class="meta-title">${w.title}</div>
+      <div class="meta-sub">${w.material}</div>
+      ${w.price ? `<div class="meta-price">${w.price}</div>` : ''}
+    `;
+    grid.appendChild(el);
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbImgCount = document.getElementById('lbImgCount');
+  const lbTitle = document.getElementById('lbTitle');
+  const lbMaterial = document.getElementById('lbMaterial');
+  const lbDims = document.getElementById('lbDims');
+  const lbSculptor = document.getElementById('lbSculptor');
+  const lbPrice = document.getElementById('lbPrice');
+  let current = 0;
+  let imgIndex = 0;
+
+  function renderImage() {
+    const w = WORKS[current];
+    lbImg.src = w.images[imgIndex];
+    lbImg.alt = w.title;
+    if (w.images.length > 1) {
+      lbImgCount.textContent = `${imgIndex + 1} / ${w.images.length} — click to see more`;
+      lbImgCount.style.display = '';
+      lbImg.classList.add('cyclable');
+    } else {
+      lbImgCount.style.display = 'none';
+      lbImg.classList.remove('cyclable');
+    }
+  }
+
+  function openLightbox(i) {
+    current = i;
+    imgIndex = 0;
+    const w = WORKS[i];
+    lbTitle.textContent = w.title;
+    lbMaterial.textContent = w.material;
+    lbDims.textContent = w.dims ? `Dimensions: ${w.dims}` : '';
+    lbDims.style.display = w.dims ? '' : 'none';
+    lbSculptor.textContent = w.sculptor ? `Sculptor: ${w.sculptor}` : '';
+    lbSculptor.style.display = w.sculptor ? '' : 'none';
+    lbPrice.textContent = w.price || '';
+    lbPrice.style.display = w.price ? '' : 'none';
+    renderImage();
+    lightbox.classList.add('active');
+  }
+
+  lbImg.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const w = WORKS[current];
+    if (w.images.length > 1) {
+      imgIndex = (imgIndex + 1) % w.images.length;
+      renderImage();
+    }
+  });
+
+  grid.querySelectorAll('.work').forEach(el => {
+    el.addEventListener('click', () => openLightbox(+el.dataset.index));
+  });
+
+  document.getElementById('lbClose').addEventListener('click', () => lightbox.classList.remove('active'));
+  document.getElementById('lbPrev').addEventListener('click', () => openLightbox((current - 1 + WORKS.length) % WORKS.length));
+  document.getElementById('lbNext').addEventListener('click', () => openLightbox((current + 1) % WORKS.length));
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) lightbox.classList.remove('active');
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') lightbox.classList.remove('active');
+    if (e.key === 'ArrowLeft') openLightbox((current - 1 + WORKS.length) % WORKS.length);
+    if (e.key === 'ArrowRight') openLightbox((current + 1) % WORKS.length);
+  });
+
+  // Custom cursor — only on devices with a real pointer (skip touch/coarse).
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.body.classList.add('has-custom-cursor');
+
+    const cursorDot = document.getElementById('cursorDot');
+    const cursorRing = document.getElementById('cursorRing');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let ringX = mouseX;
+    let ringY = mouseY;
+    let started = false;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.left = mouseX + 'px';
+      cursorDot.style.top = mouseY + 'px';
+      if (!started) {
+        // Snap the ring in on the very first move so it doesn't drift in from center.
+        ringX = mouseX;
+        ringY = mouseY;
+        cursorRing.style.left = ringX + 'px';
+        cursorRing.style.top = ringY + 'px';
+        started = true;
+      }
+      cursorDot.style.opacity = '1';
+      cursorRing.style.opacity = '1';
+    });
+
+    window.addEventListener('mouseleave', () => {
+      cursorDot.style.opacity = '0';
+      cursorRing.style.opacity = '0';
+    });
+
+    function tick() {
+      if (reduceMotion) {
+        ringX = mouseX;
+        ringY = mouseY;
+      } else {
+        // The ring trails a beat behind the point — a mark being carved.
+        ringX += (mouseX - ringX) * 0.18;
+        ringY += (mouseY - ringY) * 0.18;
+      }
+      cursorRing.style.left = ringX + 'px';
+      cursorRing.style.top = ringY + 'px';
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    const interactiveSelector = 'a, button, .work, .meta-price, .lightbox-price, img.cyclable';
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.closest(interactiveSelector)) {
+        cursorRing.classList.add('active');
+        cursorDot.classList.add('active');
+      }
+    });
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.closest(interactiveSelector)) {
+        cursorRing.classList.remove('active');
+        cursorDot.classList.remove('active');
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
