@@ -55,7 +55,7 @@ const WORKS = [
   { title: "Wonder", material: "Springstone", dims: "30x20x16 inches", sculptor: "Takawira Taruvinga", price: "$5,000",
     images: ["images/B3DC6EC2-56CC-48E1-A063-6F789D962DC2_1_105_c.jpeg", "images/IMG_2654.jpg", "images/6B79DDF3-E947-49B0-9046-039ABA1D6758.jpeg", "images/3F63D1E6-BD83-4F7E-A253-E06793A99103.jpeg"] },
 
-  { title: "Ascension", material: "White Dolomite Stone", dims: "58x30x13 inches", sculptor: "Stuart Chapenga", price: "$7,500", buyButtonId: "1786580439229",
+  { title: "Ascension", material: "White Dolomite Stone", dims: "58x30x13 inches", sculptor: "Stuart Chapenga", price: "$7,500", 
     images: ["images/BCDFCF3B-992A-45B8-8293-746BDCAF67A4.jpeg", "images/IMG_2659.jpg"] },
 
   { title: "Tower", material: "Springstone", dims: "56x13x8 inches", sculptor: "Agnes Mupariwa", price: "$5,000",
