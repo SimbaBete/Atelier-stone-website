@@ -60,6 +60,8 @@
       <p id="lbSculptor" class="lightbox-detail"></p>
       <p id="lbDims" class="lightbox-detail"></p>
       <p id="lbPrice" class="lightbox-price"></p>
+      
+      <div id='product-component-1786580439229'></div>
     </div>
   </div>
 </div>
@@ -76,6 +78,7 @@
 
 <script src="works.js"></script>
 <script>
+  let shopifyUI = null;
   const grid = document.getElementById('grid');
   WORKS.forEach((w, i) => {
     const el = document.createElement('div');
@@ -139,6 +142,62 @@
     lbSculptor.style.display = w.sculptor ? '' : 'none';
     lbPrice.textContent = w.price || '';
     lbPrice.style.display = w.price ? '' : 'none';
+
+    // Clear the previous Shopify product
+  const shopifyContainer = document.getElementById('product-component-1786580439229');
+  shopifyContainer.innerHTML = '';
+
+     // Load the correct Shopify product
+  if (w.shopifyId && shopifyUI) {
+    shopifyUI.createComponent('product', {
+      id: w.shopifyId,
+      node: shopifyContainer,
+      moneyFormat: '%24%7B%7Bamount%7D%7D',
+      options: {
+        "product": {
+          "styles": {
+            "button": {
+              "font-family": "Garamond, serif",
+              "color": "#fdfdfd",
+              ":hover": {
+                "color": "#fdfdfd",
+                "background-color": "#030303"
+              },
+              "background-color": "#020202",
+              ":focus": {
+                "background-color": "#030303"
+              }
+            }
+          },
+          "text": {
+            "button": "Add to cart"
+          }
+        },
+        "modalProduct": {
+          "contents": {
+            "img": false,
+            "imgWithCarousel": true,
+            "button": false,
+            "buttonWithQuantity": true
+          }
+        },
+        "cart": {
+          "styles": {
+            "button": {
+              "font-family": "Garamond, serif",
+              "color": "#fdfdfd",
+              "background-color": "#020202"
+            }
+          },
+          "text": {
+            "total": "Subtotal",
+            "button": "Checkout"
+          }
+        }
+      }
+    });
+  }
+    
     renderImage();
     lightbox.classList.add('active');
   }
@@ -264,128 +323,11 @@
       storefrontAccessToken: '7f5952fcfbd3601ee71efbc3f1811cb8',
     });
     ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('product', {
-        id: '15218944278900',
-        node: document.getElementById('product-component-1786580439232'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px"
-        }
-      },
-      "button": {
-        "font-family": "Garamond, serif",
-        "color": "#fdfdfd",
-        ":hover": {
-          "color": "#fdfdfd",
-          "background-color": "#030303"
-        },
-        "background-color": "#020202",
-        ":focus": {
-          "background-color": "#030303"
-        }
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      },
-      "button": {
-        "font-family": "Garamond, serif",
-        "color": "#fdfdfd",
-        ":hover": {
-          "color": "#fdfdfd",
-          "background-color": "#030303"
-        },
-        "background-color": "#020202",
-        ":focus": {
-          "background-color": "#030303"
-        }
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "option": {},
-  "cart": {
-    "styles": {
-      "button": {
-        "font-family": "Garamond, serif",
-        "color": "#fdfdfd",
-        ":hover": {
-          "color": "#fdfdfd",
-          "background-color": "#030303"
-        },
-        "background-color": "#020202",
-        ":focus": {
-          "background-color": "#030303"
-        }
-      }
-    },
-    "text": {
-      "total": "Subtotal",
-      "button": "Checkout"
-    }
-  },
-  "toggle": {
-    "styles": {
-      "toggle": {
-        "font-family": "Garamond, serif",
-        "background-color": "#020202",
-        ":hover": {
-          "background-color": "#030303"
-        },
-        ":focus": {
-          "background-color": "#030303"
-        }
-      },
-      "count": {
-        "color": "#fdfdfd",
-        ":hover": {
-          "color": "#fdfdfd"
-        }
-      },
-      "iconPath": {
-        "fill": "#fdfdfd"
-      }
-    }
-  }
-},
-      });
-    });
+       shopifyUI = ui;
+   });
   }
 })();
-/*]]>*/
+ /*]]>*/
 </script>
 </body>
 </html>
