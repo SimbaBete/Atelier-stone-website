@@ -4,7 +4,7 @@
 // sculptor, and prices below to match your actual works.
 const WORKS = [
 
-  { title: "Floral Crown II", material: "Springstone", dims: "30x17x13 inches", sculptor: "David White", price: "$2,500",
+  { title: "Floral Crown II", material: "Springstone", dims: "30x17x13 inches", sculptor: "David White", price: "$2,500", <div id='product-component-1786580439229'></div>
     images: ["images/613CDA71-2588-48AE-9955-69531AB9872C_1_105_c.jpeg", "images/IMG_2773.jpg", "images/IMG_2768.jpg", "images/IMG_2772.jpg", "images/29CB069A-A9EB-4085-8C7D-6911CFFE86B1.jpeg", "images/65BA2890-1D06-46E9-B834-9894B2502035_1_105_c.jpeg", "images/IMG_2839.jpg", "images/IMG_2829.jpg", "images/IMG_2828.jpg"] },
 
   { title: "Reverie", material: "Springstone", dims: "22x18x8 inches", sculptor: "Godfrey Matangira", price: "$5,500",
