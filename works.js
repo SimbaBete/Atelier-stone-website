@@ -46,7 +46,7 @@ const WORKS = [
   { title: "Together I", material: "Springstone", dims: "31x10x4 inches", sculptor: "Shingi Madzongwe", price: "$1,500",
     images: ["images/IMG_2684.jpg", "images/IMG_2676.jpg", "images/A70DFDE1-134A-40A2-B29B-9E97C5DE2184_1_105_c.jpeg"] },
 
-  { title: "Together VI", material: "Springstone", dims: "37x11x4 inches", sculptor: "Shingi Madzongwe", price: "",
+  { title: "Together VI", material: "Springstone", dims: "37x11x4 inches", sculptor: "Shingi Madzongwe", price: "$1,500",
     images: ["images/IMG_2699.jpg", "images/IMG_2692.jpg", "images/IMG_2695.jpg", "images/IMG_2688.jpg"] },
 
   { title: "Crashing Waves", material: "Leopard Stone", dims: "47x24x13 inches", sculptor: "Everson Nyamatsoka", price: "$7,500",
@@ -73,7 +73,7 @@ const WORKS = [
   { title: "Be Mine", material: "Springstone", dims: "13x11x7 inches", sculptor: "Takawira Taruvinga", price: "$500",
     images: ["images/F953C720-78E9-4CDB-9863-6025854A6103.jpeg", "images/IMG_2701.jpg", "images/D06EB0F8-BB2F-4E50-AA84-5BB5C4CCA75F_1_105_c.jpeg"] },
 
-  { title: "Interlocking Forms I", material: "Springstone", dims: "9.5x8x4 inches", sculptor: "Takawira Taruvinga", price: "$750",
+  { title: "Interlocking Forms I", material: "Springstone", dims: "9.5x8x4 inches", sculptor: "Takawira Taruvinga", price: "$500",
     images: ["images/IMG_2724.jpg", "images/IMG_2727.jpg", "images/IMG_2733.jpg", "images/IMG_2728.jpg"] },
 
   { title: "Gesture I", material: "Leopard Stone", dims: "20x16x10 inches", sculptor: "Addington Nyasoka", price: "$750",
@@ -85,31 +85,31 @@ const WORKS = [
   { title: "Sentinel IV", material: "Verdite stone", dims: "5x10x4 inches", sculptor: "Farai Tandi", price: "$175",
     images: ["images/IMG_2803.jpg", "images/IMG_2808.jpg", "images/IMG_2840.jpg", "images/IMG_2844.jpg", "images/IMG_2812.jpg", "images/IMG_2811.jpg"] },
 
-  { title: "Rhino Study VI", material: "Verdite stone", dims: "6x13x5 inches", sculptor: "Farai Tandi", price: "",
+  { title: "Rhino Study VI", material: "Verdite stone", dims: "6x13x5 inches", sculptor: "Farai Tandi", price: "$175",
     images: ["images/IMG_2853.jpg", "images/IMG_2894.jpg", "images/IMG_2895.jpg"] },
 
   { title: "Hippo Study I", material: "Verdite Stone", dims: "4x8x5 inches", sculptor: "Farai Tandi", price: "$175",
     images: ["images/IMG_2909.jpg", "images/IMG_2911.jpg", "images/IMG_2914.jpg"] },
 
-  { title: "Hippo Study IV", material: "Verdite stone", dims: "4x8x5 inches", sculptor: "Farai Tandi", price: "",
+  { title: "Hippo Study IV", material: "Verdite stone", dims: "4x8x5 inches", sculptor: "Farai Tandi", price: "$175",
     images: ["images/IMG_2929.jpg", "images/IMG_2932.jpg", "images/IMG_2933.jpg"] },
 
-  { title: "Elephant Study in Jade I", material: "Butter Jade Stone", dims: "6x10x4 inches", sculptor: "Farai Tandi", price: "$175",
+  { title: "Elephant Study in Jade I", material: "Butter Jade Stone", dims: "6x10x4 inches", sculptor: "Farai Tandi", price: "$250",
     images: ["images/IMG_2899.jpg", "images/IMG_2904.jpg", "images/IMG_2906.jpg"] },
 
   { title: "Elephant Study in Green Verdite", material: "Verdite Stone", dims: "8x10x5 inches", sculptor: "Farai Tandi", price: "$250",
     images: ["images/IMG_2917.jpg", "images/IMG_2920.jpg", "images/IMG_2921.jpg", "images/IMG_2922.jpg", "images/IMG_2923.jpg"] },
 
-  { title: "Elephant In Springstone", material: "Springstone", dims: "8x10x5 inches", sculptor: "Farai Tandi", price: "$250",
+  { title: "Elephant In Springstone", material: "Springstone", dims: "8x10x5 inches", sculptor: "Farai Tandi", price: "$175",
     images: ["images/IMG_2736.jpg", "images/IMG_2737.jpg", "images/IMG_2738.jpg", "images/IMG_2739.jpg"] },
 
-  { title: "Elephant Study In Cobalt", material: "Cobalt Stone", dims: "9x6x2 inches", sculptor: "Farai Tandi", price: "$250",
+  { title: "Elephant Study In Cobalt", material: "Cobalt Stone", dims: "9x6x2 inches", sculptor: "Farai Tandi", price: "$175",
     images: ["images/IMG_2740.jpg", "images/IMG_2741.jpg", "images/IMG_2742.jpg", "images/IMG_2743.jpg"] },
 
-  { title: "Winged Form IX", material: "Butter Jade Stone", dims: "8x6x2 inches", sculptor: "", price: "$250",
+  { title: "Winged Form IX", material: "Butter Jade Stone", dims: "8x6x2 inches", sculptor: "", price: "$175",
     images: ["images/IMG_2962.jpg", "images/IMG_2963.jpg", "images/IMG_2964.jpg", "images/IMG_2965.jpg"] },
 
-  { title: "Winged Form V", material: "Fruit Serpentine Stone", dims: "10x6x2 inches", sculptor: "", price: "",
+  { title: "Winged Form V", material: "Fruit Serpentine Stone", dims: "10x6x2 inches", sculptor: "", price: "175",
     images: ["images/IMG_2958.jpg", "images/IMG_2959.jpg", "images/IMG_2960.jpg", "images/IMG_2961.jpg"] },
 
   { title: "Vessel Pair I", material: "Golden Opal Stone", dims: "Tan, 2.5 x 10.5 x 5.5 inches and 2.75 x 9.5 x 5.5 inches", sculptor: "Addington Nyasoka", price: "$250",
