@@ -262,6 +262,7 @@ nav a:hover, nav a.active { color: var(--accent); }
   justify-content: center;
   z-index: 1000;
   padding: 60px 40px;
+   overflow-y: auto;
 }
 
 .lightbox.active { display: flex; }
