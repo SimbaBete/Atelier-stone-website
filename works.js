@@ -70,7 +70,7 @@ const WORKS = [
   { title: "Equilibrium I", material: "Leopard Stone", dims: "21x12x7 inches", sculptor: "Addington Nyasoka", price: "$750", shopifyId: "1786672999098",
     images: ["images/1786385695109_1CC231BC-03F2-4CE6-9549-B361750FF373.jpeg", "images/IMG_2752.jpg", "images/IMG_2753.jpg", "images/IMG_2757.jpg"] },
 
-  { title: "Be Mine", material: "Springstone", dims: "13x11x7 inches", sculptor: "Takawira Taruvinga", price: "$500", shopifyId: "'15219254264180",
+  { title: "Be Mine", material: "Springstone", dims: "13x11x7 inches", sculptor: "Takawira Taruvinga", price: "$500", shopifyId: "15219254264180",
     images: ["images/F953C720-78E9-4CDB-9863-6025854A6103.jpeg", "images/IMG_2701.jpg", "images/D06EB0F8-BB2F-4E50-AA84-5BB5C4CCA75F_1_105_c.jpeg"] },
 
   { title: "Interlocking Forms I", material: "Springstone", dims: "9.5x8x4 inches", sculptor: "Takawira Taruvinga", price: "$500", shopifyId: "1786673280251",
