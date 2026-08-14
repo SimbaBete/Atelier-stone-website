@@ -109,7 +109,7 @@ const WORKS = [
   { title: "Winged Form IX", material: "Butter Jade Stone", dims: "8x6x2 inches", sculptor: "", price: "$175", shopifyId: "15219544588660",
     images: ["images/IMG_2962.jpg", "images/IMG_2963.jpg", "images/IMG_2964.jpg", "images/IMG_2965.jpg"] },
 
-  { title: "Winged Form V", material: "Fruit Serpentine Stone", dims: "10x6x2 inches", sculptor: "", price: "175", shopifyId: "15219555369332",
+  { title: "Winged Form V", material: "Fruit Serpentine Stone", dims: "10x6x2 inches", sculptor: "", price: "$175", shopifyId: "15219555369332",
     images: ["images/IMG_2958.jpg", "images/IMG_2959.jpg", "images/IMG_2960.jpg", "images/IMG_2961.jpg"] },
 
   { title: "Vessel Pair I", material: "Golden Opal Stone", dims: "Tan, 2.5 x 10.5 x 5.5 inches and 2.75 x 9.5 x 5.5 inches", sculptor: "Addington Nyasoka", price: "$250", shopifyId: "15219568345460",
