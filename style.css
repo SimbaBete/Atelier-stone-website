@@ -60,10 +60,11 @@ header {
 
 .logo {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 30px;
-  letter-spacing: 0.18em;
+  font-size: 38px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 500;
+  line-height: 1;
 }
 
 nav a {
@@ -500,8 +501,14 @@ footer {
 
 @media (max-width: 560px) {
   .grid { grid-template-columns: 1fr; }
-  .logo { 
-    font-size: 19px;
-    letter-spacing: 0.14em;
+
+  .logo {
+    font-size: 22px;
+    letter-spacing: 0.10em;
+  }
+
+  nav a {
+    margin-left: 10px;
+    font-size: 9px;
   }
 }
