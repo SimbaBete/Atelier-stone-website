@@ -114,12 +114,14 @@ nav a:hover, nav a.active { color: var(--accent); }
 }
 
 .hero p {
-  font-size: 13px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  text-transform: none;
   color: var(--gray);
+  font-style: italic;
+  max-width: 700px;
 }
-
 .scroll-hint {
   position: absolute;
   bottom: 36px;
