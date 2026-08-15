@@ -51,7 +51,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 40px;
+  padding: 24px 40px;
   z-index: 100;
   background: rgba(255,255,255,0.92);
   backdrop-filter: blur(6px);
@@ -60,11 +60,12 @@ header {
 
 .logo {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 38px;
-  letter-spacing: 0.16em;
+  font-size: 52px;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
   font-weight: 500;
-  line-height: 1;
+  line-height: 0.9;
+  color: var(--black);
 }
 
 nav a {
@@ -500,15 +501,13 @@ footer {
 }
 
 @media (max-width: 560px) {
-  .grid { grid-template-columns: 1fr; }
-
   .logo {
-    font-size: 22px;
-    letter-spacing: 0.10em;
+    font-size: 27px;
+    letter-spacing: 0.07em;
   }
 
   nav a {
-    margin-left: 10px;
+    margin-left: 8px;
     font-size: 9px;
   }
 }
