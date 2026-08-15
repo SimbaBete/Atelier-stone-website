@@ -60,8 +60,8 @@ header {
 
 .logo {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 22px;
-  letter-spacing: 0.22em;
+  font-size: 30px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -498,5 +498,8 @@ footer {
 
 @media (max-width: 560px) {
   .grid { grid-template-columns: 1fr; }
-  .logo { font-size: 14px; }
+  .logo { 
+    font-size: 19px;
+    letter-spacing: 0.14em;
+  }
 }
