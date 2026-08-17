@@ -4,19 +4,19 @@
 // sculptor, and prices below to match your actual works.
 const WORKS = [
 
-  { title: "Floral Crown II", material: "Springstone", dims: "30x17x13 inches", sculptor: "David White", price: "$2,500", shopifyId: "15218310447476",
-    images: ["images/613CDA71-2588-48AE-9955-69531AB9872C_1_105_c.jpeg", "images/IMG_2773.jpg", "images/IMG_2768.jpg", "images/IMG_2772.jpg", "images/29CB069A-A9EB-4085-8C7D-6911CFFE86B1.jpeg", "images/65BA2890-1D06-46E9-B834-9894B2502035_1_105_c.jpeg", "images/IMG_2839.jpg", "images/IMG_2829.jpg", "images/IMG_2828.jpg"] },
+  { title: "Floral Crown II", material: "Springstone", dims: "30x17x13 inches", sculptor: "David White", price: "$5,500", shopifyId: "15218310447476",
+    images: ["images/613CDA71-2588-48AE-9955-69531AB9872C_1_105_c.jpeg", "images/IMG_2773.jpg", "images/IMG_2768.jpg", "images/IMG_2772.jpg", "images/29CB069A-A9EB-4085-8C7D-6911CFFE86B1.jpeg", "images/65BA2890-1D06-46E9-B834-9894B2502035_1_105_c.jpeg", "images/IMG_2828.jpg"] },
 
-  { title: "Reverie", material: "Springstone", dims: "22x18x8 inches", sculptor: "Godfrey Matangira", price: "$5,500", shopifyId: "15218313298292",
+  { title: "Reverie", material: "Springstone", dims: "22x18x8 inches", sculptor: "Godfrey Matangira", price: "$4,500", shopifyId: "15218313298292",
     images: ["images/9E883B4D-0AD9-49F0-A6BD-2A5559F9A551.jpeg", "images/IMG_2669.jpg", "images/71210B2A-6D72-4C1A-959C-B1B71BAF7E1A.jpeg", "images/FB2764F8-0C78-4D5C-BFAF-FD4EF8B54BF1_1_105_c.jpeg", "images/B69F1FE1-418A-4827-8551-2AD15CF5CA16.jpeg"] },
 
-  { title: "Human Study I", material: "Springstone", dims: "21x12x12 inches", sculptor: "Farai Tandi ne Tigere", price: "$2,500", shopifyId: "15218314936692",
+  { title: "Human Study I", material: "Springstone", dims: "21x12x12 inches", sculptor: "Farai Tandi ne Tigere", price: "$3,500", shopifyId: "15218314936692",
     images: ["images/C51E8866-AB12-498E-BF73-59CE074490BF_1_105_c.jpeg", "images/5B550455-DC8D-4A33-A3BC-2C69A810D9C5_1_105_c.jpeg", "images/18AE9BEC-9C74-47A7-A330-5B4A42995923_1_105_c.jpeg", "images/5A6832BF-3F1A-41A8-8E21-23D83E9B6B49_1_102_o.jpeg"] },
 
   { title: "Priestess", material: "Butter Jade Stone", dims: "12x7x6 inches", sculptor: "Lovemore Mangenda", price: "$500 - SOLD", 
     images: ["images/1CA9BAB9-049F-4F5B-80E4-461E24A9DD12_1_105_c.jpeg", "images/227E7894-7A11-4CA8-8E76-F48ADBAE3E04_1_105_c.jpeg", "images/363FB187-0D2E-4C1E-A232-1E1FD38D60D1_1_102_a.jpeg", "images/62F6F604-B250-4152-9675-4C6F26B29D9E_1_102_a.jpeg", "images/F1151CFA-48F8-4270-972C-94415BCECC72_1_105_c.jpeg"] },
 
-  { title: "Venus", material: "Agate Stone", dims: "17x10x8 inches", sculptor: "Chenjerai Chiripanyanga", price: "$1,500", shopifyId: "15218319753588",
+  { title: "Venus", material: "Agate Stone", dims: "17x10x8 inches", sculptor: "Chenjerai Chiripanyanga", price: "$2,000", shopifyId: "15218319753588",
     images: ["images/44CA7786-8A3E-4924-91F2-378BBECE07FF_1_105_c.jpeg", "images/IMG_2663.jpg", "images/84B1F1EA-191B-4265-AD45-CBC81A80B5A2_1_105_c.jpeg", "images/BB2EFB74-EFBF-41E3-8E37-DF61258C19CF.jpeg"] },
 
   { title: "Lust", material: "Red Jasper Stone", dims: "24x13x10 inches", sculptor: "Stewart Nyahungwa", price: "$2,500", shopifyId: "15218321817972",
@@ -40,16 +40,16 @@ const WORKS = [
   { title: "Family Group I", material: "Springstone", dims: "6x4x4 inches", sculptor: "", price: "$175", shopifyId: "15218606866804",
     images: ["images/IMG_2935.jpg", "images/IMG_2936.jpg", "images/IMG_2937.jpg"] },
 
-  { title: "Constellation I", material: "Cobalt Stone", dims: "21x17x13 inches", sculptor: "Themba Nyanhemwa", price: "$1,500", shopifyId: "15218684658036",
+  { title: "Constellation I", material: "Cobalt Stone", dims: "21x17x13 inches", sculptor: "Themba Nyanhemwa", price: "$2,500", shopifyId: "15218684658036",
     images: ["images/A46D977E-9F05-4681-B36B-5E1800E7BA81.jpeg", "images/BD955970-7AEF-4F46-A9B9-D43DD556D476.jpeg", "images/IMG_2834.jpg", "images/39E7D0AD-45C1-4DAD-A0CD-3D3A44A3A0FE.jpeg"] },
 
-  { title: "Together I", material: "Springstone", dims: "31x10x4 inches", sculptor: "Shingi Madzongwe", price: "$1,500", shopifyId: "15218714476916",
+  { title: "Together I", material: "Springstone", dims: "31x10x4 inches", sculptor: "Shingi Madzongwe", price: "$2,500", shopifyId: "15218714476916",
     images: ["images/IMG_2684.jpg", "images/IMG_2676.jpg", "images/A70DFDE1-134A-40A2-B29B-9E97C5DE2184_1_105_c.jpeg"] },
 
-  { title: "Together VI", material: "Springstone", dims: "37x11x4 inches", sculptor: "Shingi Madzongwe", price: "$1,500", shopifyId: "15218834080116",
+  { title: "Together VI", material: "Springstone", dims: "37x11x4 inches", sculptor: "Shingi Madzongwe", price: "$2,500", shopifyId: "15218834080116",
     images: ["images/IMG_2699.jpg", "images/IMG_2692.jpg", "images/IMG_2695.jpg", "images/IMG_2688.jpg"] },
 
-  { title: "Crashing Waves", material: "Leopard Stone", dims: "47x24x13 inches", sculptor: "Everson Nyamatsoka", price: "$7,500", shopifyId: "15218843222388",
+  { title: "Crashing Waves", material: "Leopard Stone", dims: "47x24x13 inches", sculptor: "Everson Nyamatsoka", price: "$10,000", shopifyId: "15218843222388",
     images: ["images/0A1116B2-A8A6-4EF1-AD50-DC05AC6D39A3.jpeg"] },
 
   { title: "Wonder", material: "Springstone", dims: "30x20x16 inches", sculptor: "Takawira Taruvinga", price: "$5,000", shopifyId: "15218866356596",
@@ -61,22 +61,22 @@ const WORKS = [
   { title: "Tower", material: "Springstone", dims: "56x13x8 inches", sculptor: "Agnes Mupariwa", price: "$5,000", shopifyId: "15219049529716",
     images: ["images/A8BA651C-B4F6-4965-90AD-F61F91F7796C_1_105_c.jpeg", "images/120D4E5C-2D6B-44FD-9AB3-198943BBD350_1_105_c.jpeg", "images/BBB486B5-0ACA-4305-A7E5-2C52B786125C_1_105_c.jpeg", "images/6B604719-D994-4D58-B64D-4A61A2B0D672_1_105_c.jpeg"] },
 
-  { title: "Unending I", material: "Springstone", dims: "28x22x13 inches", sculptor: "Agnes Mupariwa", price: "$2,500", shopifyId: "15219064996212",
+  { title: "Unending I", material: "Springstone", dims: "28x22x13 inches", sculptor: "Agnes Mupariwa", price: "$5,000", shopifyId: "15219064996212",
     images: ["images/3F503327-E0EE-4B33-A850-8040D359A31A.jpeg", "images/01EBD498-E975-4A9E-AA93-6987A449B352_1_105_c.jpeg", "images/464E0AC5-01A3-45D6-844C-92EB3D9010D9_1_105_c.jpeg", "images/FF35E912-92B4-4437-8428-38B6A77A92E1.jpeg", "images/7372DEA6-6C58-4E3A-9F4B-55588EBBB4E1_1_105_c.jpeg"] },
 
   { title: "Unending II", material: "Springstone", dims: "38x20x11 inches", sculptor: "Agnes Mupariwa", price: "$3,500", shopifyId: "15219152879988",
     images: ["images/23B58109-187B-4D1D-BF32-37FEA629E880.jpeg", "images/651953FF-8E03-45F9-94E8-26D8AA39944F.jpeg", "images/BD09E390-2D3C-433A-A52A-4878F84BF91D_1_105_c.jpeg", "images/E0B3B90E-8EDA-4087-A603-49FE70AB1F48_1_105_c.jpeg"] },
 
-  { title: "Equilibrium I", material: "Leopard Stone", dims: "21x12x7 inches", sculptor: "Addington Nyasoka", price: "$750", shopifyId: "15219247841652",
+  { title: "Equilibrium I", material: "Leopard Stone", dims: "21x12x7 inches", sculptor: "Addington Nyasoka", price: "$1,200", shopifyId: "15219247841652",
     images: ["images/1786385695109_1CC231BC-03F2-4CE6-9549-B361750FF373.jpeg", "images/IMG_2752.jpg", "images/IMG_2753.jpg", "images/IMG_2757.jpg"] },
 
-  { title: "Be Mine", material: "Springstone", dims: "13x11x7 inches", sculptor: "Takawira Taruvinga", price: "$500", shopifyId: "15219254264180",
+  { title: "Be Mine", material: "Springstone", dims: "13x11x7 inches", sculptor: "Takawira Taruvinga", price: "$750", shopifyId: "15219254264180",
     images: ["images/F953C720-78E9-4CDB-9863-6025854A6103.jpeg", "images/IMG_2701.jpg", "images/D06EB0F8-BB2F-4E50-AA84-5BB5C4CCA75F_1_105_c.jpeg"] },
 
   { title: "Interlocking Forms I", material: "Springstone", dims: "9.5x8x4 inches", sculptor: "Takawira Taruvinga", price: "$500", shopifyId: "15219265765748",
     images: ["images/IMG_2724.jpg", "images/IMG_2727.jpg", "images/IMG_2733.jpg", "images/IMG_2728.jpg"] },
 
-  { title: "Gesture I", material: "Leopard Stone", dims: "20x16x10 inches", sculptor: "Addington Nyasoka", price: "$750", shopifyId: "15219357319540",
+  { title: "Gesture I", material: "Leopard Stone", dims: "20x16x10 inches", sculptor: "Addington Nyasoka", price: "$1,200", shopifyId: "15219357319540",
     images: ["images/IMG_2716.jpg", "images/IMG_2715.jpg", "images/IMG_2709.jpg", "images/IMG_2712.jpg", "images/IMG_2721.jpg"] },
 
   { title: "Sentinel I", material: "Verdite stone", dims: "9x3x3 inches", sculptor: "", price: "$175", shopifyId: "15219361153396",
