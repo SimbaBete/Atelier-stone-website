@@ -491,6 +491,36 @@ nav a:hover, nav a.active { color: var(--accent); }
   margin: 0 auto 28px;
 }
 
+.shipping {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 40px 140px;
+  text-align: center;
+}
+
+.shipping h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 15px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 28px;
+}
+
+.shipping p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.75;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.shipping .rule {
+  width: 48px;
+  height: 1px;
+  background: var(--accent);
+  margin: 0 auto 28px;
+}
+  
 footer {
   border-top: 1px solid var(--line);
   padding: 48px;
