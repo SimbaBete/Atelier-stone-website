@@ -77,9 +77,7 @@
       <p id="lbPrice" class="lightbox-price"></p>
       
       <div id='product-component-1786580439229'></div>
-      <p class="shipping-note">
-  Shipping calculated separately based on artwork size and delivery location.
-</p>
+     <p id="shippingNote" class="shipping-note"></p>
     </div>
   </div>
 </div>
@@ -152,6 +150,28 @@
     current = i;
     imgIndex = 0;
     const w = WORKS[i];
+    const shippingNote = document.getElementById('shippingNote');
+
+if (w.shipping) {
+  const specialHandling = ["$750", "$1,500"].includes(w.shipping);
+  const crating = ["$500", "$750", "$1,500"].includes(w.shipping);
+
+  let service = "boxing, shipping, and handling";
+
+  if (crating) {
+    service = specialHandling
+      ? "crating, shipping, and special handling"
+      : "crating, shipping, and handling";
+  }
+
+  shippingNote.textContent =
+    `Approximate domestic ${service} costs are ${w.shipping}, depending upon destination and timeframe. ` +
+    `In-person pickup, local delivery, and international shipping options are available upon request.`;
+
+  shippingNote.style.display = "";
+} else {
+  shippingNote.style.display = "none";
+}
     lbTitle.textContent = w.title;
     lbMaterial.textContent = w.material;
     lbDims.textContent = w.dims ? `Dimensions: ${w.dims}` : '';
