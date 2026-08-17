@@ -64,7 +64,7 @@ const WORKS = [
   { title: "Unending I", material: "Springstone", dims: "28x22x13 inches", sculptor: "Agnes Mupariwa", price: "$5,000", shopifyId: "15219064996212", shipping: "$1,500",
     images: ["images/3F503327-E0EE-4B33-A850-8040D359A31A.jpeg", "images/01EBD498-E975-4A9E-AA93-6987A449B352_1_105_c.jpeg", "images/464E0AC5-01A3-45D6-844C-92EB3D9010D9_1_105_c.jpeg", "images/FF35E912-92B4-4437-8428-38B6A77A92E1.jpeg", "images/7372DEA6-6C58-4E3A-9F4B-55588EBBB4E1_1_105_c.jpeg"] },
 
-  { title: "Unending II", material: "Springstone", dims: "38x20x11 inches", sculptor: "Agnes Mupariwa", price: "$3,500", shopifyId: "15219152879988", shipping: "$1,500",
+  { title: "Unending II", material: "Springstone", dims: "38x20x11 inches", sculptor: "Agnes Mupariwa", price: "$5,000", shopifyId: "15219152879988", shipping: "$1,500",
     images: ["images/23B58109-187B-4D1D-BF32-37FEA629E880.jpeg", "images/651953FF-8E03-45F9-94E8-26D8AA39944F.jpeg", "images/BD09E390-2D3C-433A-A52A-4878F84BF91D_1_105_c.jpeg", "images/E0B3B90E-8EDA-4087-A603-49FE70AB1F48_1_105_c.jpeg"] },
 
   { title: "Equilibrium I", material: "Leopard Stone", dims: "21x12x7 inches", sculptor: "Addington Nyasoka", price: "$1,200", shopifyId: "15219247841652", shipping: "$500",
